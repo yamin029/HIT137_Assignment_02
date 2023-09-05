@@ -80,6 +80,7 @@ def decrypt (encrypted_text, keyword):
         step = int(movement[1])
         movements.append((direction, step))
     return movements
+
 #  Question 3
 # Function to calculate the distance of the car 
 def run_distance_calculator():
@@ -111,6 +112,7 @@ def run_distance_calculator():
     distance = math.sqrt(pos[0] ** 2 + pos[1] ** 2)
     # Return the calculated distance
     return distance
+
 # Question 4 sub-section 1
 # Function to process the input text
 def process_text(text):
@@ -141,7 +143,6 @@ def process_text(text):
         numbers.append(int(temp_num))  # Add any remaining numeric sequence if present.
 
     return numbers, chars
-
 # Question 4 sub-section 2
 # Function to check if the number is prime
 def is_prime(n):
@@ -168,7 +169,6 @@ def is_prime(n):
         i += 6
 
     return True  # If no divisors found, it's prime.
-
 # Question 4 sub-section 3
 # Function palindrome word greater than 4
 def is_palindrome(word):
@@ -182,7 +182,6 @@ def is_palindrome(word):
         bool: True if the word is a palindrome and longer than 4 characters, False otherwise.
     """
     return word == word[::-1] and len(word) > 4
-
 # Main program
 def main():
     while True:
@@ -192,9 +191,7 @@ def main():
         print("3. Distance Calculator")
         print("4. Palindrome Checker And PrimeSum Calculator")
         print("0. Exit")
-        
         choice = input("Enter your choice: ")
-        
         if choice == "1":
             validate_passwords()
         elif choice == "2":
@@ -241,15 +238,13 @@ def main():
                     # If no palindrome is found in characters
                     if not alphabet_palindrome_found:
                         print("No palindrome found in characters.")
-            
             except FileNotFoundError:
                 print("File not found.")
-                
         elif choice == "0":
             print("Exiting the program.")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, or 0.")
+            print("Invalid choice. Please enter 1, 2, 3, 4 or 0.")
 
 if __name__ == "__main__":
     main()
